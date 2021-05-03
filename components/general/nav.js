@@ -23,7 +23,11 @@ class Nav extends React.Component {
       <div className="contenedor">
         <img src="/logo.svg" />
         <form onSubmit={this.submit}>
-          <input name="s" onChange={this.cambio} placeholder="City" />
+          <input
+            name="s" onChange={this.cambio}
+            placeholder="Enter the city of Finland"
+            autoComplete="off"
+          />
           <img onClick={this.submit} src="/search.svg" />
         </form>
         <style jsx>{`

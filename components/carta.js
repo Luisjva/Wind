@@ -8,28 +8,31 @@ class Carta extends React.Component {
 
   render() {
     return (
-      <section>
-        <img className="img" src={this.props.photo} />
+      <div>
+
+        <section>
+          <img className="img" src={this.props.photo} />
 
 
-        <div className="div2">
+          <div className="div2">
 
-          <SuperHost
-            super={this.props.superHost}
-            type={this.props.type}
-            beds={this.props.beds}
-          />
+            <SuperHost
+              super={this.props.superHost}
+              type={this.props.type}
+              beds={this.props.beds}
+            />
 
-          <div className="votacion">
-            <img className="estrella" src="/estrella.svg" />
-            <p className="votacion-p">{this.props.rating}</p>
+            <div className="votacion">
+              <img className="estrella" src="/estrella.svg" />
+              <p className="votacion-p">{this.props.rating}</p>
+            </div>
           </div>
-        </div>
 
 
-        <p className="descripcion">{this.props.title}</p>
+          <p className="descripcion">{this.props.title}</p>
 
-        <p className="titulo">{this.props.superHost}</p>
+          <p className="titulo">{this.props.superHost}</p>
+        </section>
 
         <style jsx>{`
           section {
@@ -37,12 +40,10 @@ class Carta extends React.Component {
             margin: 2rem auto 0 auto;
             border-radius: 1.5rem;
             padding-bottom: 0.5rem;
-            transition: .3s;
           }
-  
+
           section:hover {
-            background: #eee;
-            box-shadow: 0 0 10px #000
+            border: 1px solid #333
           }
   
           .img {
@@ -89,8 +90,9 @@ class Carta extends React.Component {
             margin-block-start: 0;
             margin-block-end: 0;
           }
+
         `}</style>
-      </section>
+      </div>
     )
 
   }

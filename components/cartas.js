@@ -173,13 +173,14 @@ function Todas(props) {
           rating={lugar.rating}
           type={lugar.type}
           beds={lugar.beds}
+          country={lugar.country}
         />
       )
     )
   } else {
     let lugaresRestringidos = [];
     for (let i = 0; i < lugares.length; i++) {
-      if (props.estado == lugares[i].beds) {
+      if (lugares[i].city.includes(props.estado)) {
         lugaresRestringidos.push(lugares[i])
       }
     }
