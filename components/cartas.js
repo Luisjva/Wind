@@ -210,12 +210,6 @@ function Todas(props) {
             grid-template-columns: 1fr;
           }
 
-          @media screen and (min-width: 700px) {
-            .lugares-contenedor {
-              grid-template-columns: repeat(2, 1fr);
-            }
-          }
-
           @media screen and (min-width: 770px) {
             .lugares-contenedor {
               width: 90%;
@@ -223,14 +217,13 @@ function Todas(props) {
             }
           }
 
-          @media screen and (min-width: 850px) {
+          @media screen and (min-width: 830px) {
             .lugares-contenedor {
-              width: 85%;
-              margin: auto;
+              grid-template-columns: repeat(2, 1fr);
             }
           }
 
-          @media screen and (min-width: 1000px) {
+          @media screen and (min-width: 1100px) {
             .lugares-contenedor {
               grid-template-columns: repeat(3, 1fr);
               width: 100%;
